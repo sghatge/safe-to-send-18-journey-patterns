@@ -1,0 +1,12 @@
+[
+  {"name": "Welcome HR", "pattern": "welcome",
+   "steps": ["trigger:signup", "email", "wait", "email", "preference_center"], "guards": ["exit_on_unsubscribe", "consent_check"]},
+  {"name": "Welcome GR", "pattern": "welcome",
+   "steps": ["trigger:signup", "email", "email"], "guards": ["exit_on_unsubscribe", "consent_check"]},
+  {"name": "Welcome AT", "pattern": "welcome",
+   "steps": ["trigger:signup", "wait", "email", "wait", "email", "preference_center"], "guards": ["consent_check"]},
+  {"name": "Welcome HU", "pattern": "welcome",
+   "steps": ["segment:all_new_this_month", "email"], "guards": []},
+  {"name": "Order confirmation SI", "pattern": "transactional",
+   "steps": ["trigger:event", "email"], "guards": ["exit_on_unsubscribe"]}
+]
